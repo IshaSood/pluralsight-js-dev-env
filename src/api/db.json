@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 13772345,
+      "firstName": "Caesar",
+      "lastName": "Koelpin",
+      "email": "Patsy80@hotmail.com"
+    },
+    {
+      "id": 20581907,
+      "firstName": "Eveline",
+      "lastName": "Abshire",
+      "email": "Elfrieda22@hotmail.com"
+    },
+    {
+      "id": 62257978,
+      "firstName": "Hayden",
+      "lastName": "Bahringer",
+      "email": "Marquis41@yahoo.com"
+    },
+    {
+      "id": 72667206,
+      "firstName": "Bessie",
+      "lastName": "McDermott",
+      "email": "Brooks_Spinka72@hotmail.com"
+    }
+  ]
+}

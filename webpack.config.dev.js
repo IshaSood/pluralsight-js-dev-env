@@ -5,7 +5,7 @@ export default {
   debug: true,
   devtool: 'inline-source-map',
   noInfo: false,
-  entry: [
+  entry: ['whatwg-fetch',
     path.resolve(__dirname, 'src/index')
   ],
   target: 'web',
