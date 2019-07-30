@@ -1,21 +1,21 @@
+//srcServer.js file that serves our src folder. Now we have distServer to serve our dist folder
+//It is used to serve our production app locally just to confirm the production build works locally
 import express from 'express';
 import path from 'path';
 import open from 'open';
-import webpack from 'webpack';
-import config from '../webpack.config.dev';
+import compression from 'compression';
 
 /*eslint-disable no-console */
 const port = 3002;
 const app = express();
-const compiler = webpack(config);
 
- app.use(require('webpack-dev-middleware')(compiler,{
-   noInfo : true,
-   publicPath : config.output.publicPath
- }));
+// Enable GZip compression. Production server should be using GZip compression
+app.use(compression());
+//Add support to express to serve static file --setting for prod
+app.use(express.static('dist'));
 
 app.get('/', function(req,res){
-  res.sendFile(path.join(__dirname, '../src/index.html'));
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 app.get('/users', function(req, res){
